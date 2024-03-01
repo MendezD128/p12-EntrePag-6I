@@ -25,3 +25,60 @@ samples, guidance on mobile development, and a full API reference.
 - ![image](https://github.com/MendezD128/p12-EntrePag-6I/assets/143744206/b256695a-265f-4bf6-832e-ddd61d8b8229)
 - ![image](https://github.com/MendezD128/p12-EntrePag-6I/assets/143744206/5517bb8a-2af4-426d-b620-25e58b216209)
 
+
+
+import 'package:flutter/material.dart';
+import 'package:Mendez/pantalla2.dart';
+
+class Pantalla1 extends StatelessWidget {
+  const Pantalla1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Pantalla 1 Danna Mendez'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          Text("FlutLab is on your service!", style: TextStyle(fontSize: 30)),
+          Icon(Icons.mood, size: 90),
+          ElevatedButton(
+            child: Text("Vamonos a la pantalla 2"),
+            onPressed: () {
+              Navigator.pushNamed(context, "/pantalla2",
+                  arguments: "Mensa de Pantalla 1");
+            },
+          ),
+          child: Container(
+          width: double.infinity,
+          height: 300,
+          Card(
+            width: double.infinity,
+        //   height: 300,
+        //   child: Card(
+        //     margin: EdgeInsets.all(32),
+        //     child: Padding(
+        //       padding: EdgeInsets.all(16),
+        //       child: Text(
+        //         'Flutter Teacher',
+        //         style: TextStyle(fontSize: 30),
+        //       ),
+        //     ),
+        //   ),
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                "Tarjeta Mendez",
+                style: TextStyle(fontSize: 30),
+              
+            ),),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
