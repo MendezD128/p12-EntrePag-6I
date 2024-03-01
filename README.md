@@ -40,21 +40,37 @@ class Pantalla1 extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          Text("FlutLab is on your service!", style: TextStyle(fontSize: 30)),
-          Icon(Icons.mood, size: 90),
+          Text("FlutLab is on your service!",
+              style: TextStyle(
+                  fontSize: 29,
+                  color: Colors.blueAccent.withOpacity(0.6),
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold)),
+          Icon(Icons.mood, size: 90, color: Colors.blueGrey),
           ElevatedButton(
-            child: Text("Vamonos a la pantalla 2"),
+            style: ElevatedButton.styleFrom(
+              primary: Color(0xffff0000), // Background color
+            ),
+            child:
+                Text("Vamonos a la pantalla 2", style: TextStyle(fontSize: 29)),
             onPressed: () {
               Navigator.pushNamed(context, "/pantalla2",
                   arguments: "Mensa de Pantalla 1");
             },
           ),
           Card(
+            color: Color(0xff000000),
+            elevation: 10,
+            shadowColor: Colors.red,
             child: Padding(
               padding: EdgeInsets.all(16),
               child: Text(
                 "Tarjeta Mendez",
-                style: TextStyle(fontSize: 30),
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white.withOpacity(1),
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold),
               ),
             ),
           )
@@ -63,3 +79,4 @@ class Pantalla1 extends StatelessWidget {
     );
   }
 }
+
